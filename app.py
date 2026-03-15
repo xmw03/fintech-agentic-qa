@@ -9,8 +9,16 @@ import logging
 
 load_dotenv()
 
-OPENAI_API_KEY       = os.getenv("OPENAI_API_KEY", "")
-ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", "ALPHAVANTAGE_API_KEY", "")
+try:
+    OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+except Exception:
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+
+try:
+    ALPHAVANTAGE_API_KEY = st.secrets["ALPHAVANTAGE_API_KEY"]
+except Exception:
+    ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", "")
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 DB_PATH = "stocks.db"
 
