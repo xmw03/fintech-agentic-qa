@@ -2,6 +2,6 @@ pandas
 yfinance
 python-dotenv
 openai
-streamlit
+streamlit>=1.39.0
 requests
 altair<5
