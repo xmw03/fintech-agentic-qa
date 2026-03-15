@@ -9,8 +9,8 @@ import logging
 
 load_dotenv()
 
-OPENAI_API_KEY       = os.getenv("OPENAI_API_KEY", "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")
-ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", "ALPHAVANTAGE_API_KEY", "2FSY7DF9F9SWT3QB")
+OPENAI_API_KEY       = os.getenv("OPENAI_API_KEY", "")
+ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY", "ALPHAVANTAGE_API_KEY", "")
 client = OpenAI(api_key=OPENAI_API_KEY)
 DB_PATH = "stocks.db"
 
