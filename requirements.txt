@@ -4,3 +4,4 @@ python-dotenv
 openai
 streamlit
 requests
+altair<5
